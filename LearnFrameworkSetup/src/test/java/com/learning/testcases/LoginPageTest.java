@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import com.learning.driver.Driver;
+import com.learning.driver.DriverManager;
+
 public class LoginPageTest extends BaseTest{
 	
 	//1. Never hardcode any values.
@@ -20,7 +23,7 @@ public class LoginPageTest extends BaseTest{
 	public void test1() {
 		
 		
-        driver.findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		DriverManager.getDr().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
         
 		
 	
@@ -30,7 +33,7 @@ public class LoginPageTest extends BaseTest{
 	public void test2() {
 		
 		
-        driver.findElement(By.name("q")).sendKeys("Selenium",Keys.ENTER);
+		DriverManager.getDr().findElement(By.name("q")).sendKeys("Selenium",Keys.ENTER);
         
 		
 	
